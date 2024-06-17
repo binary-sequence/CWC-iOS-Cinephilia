@@ -11,9 +11,24 @@ struct HomeView: View {
     @Environment(MoviesViewModel.self) var model
     
     var body: some View {
-        VStack {
+        List {
             ForEach(model.movies) { m in
-                Text(m.originalTitle)
+                HStack {
+                    Image(systemName: "movieclapper")
+                        .font(.largeTitle)
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(m.originalTitle)
+                                .bold()
+                            Spacer()
+                            if m.originalLanguage != "en" {
+                                let title = "(\(m.title))"
+                                Text(title)
+                            }
+                        }
+                        Text(m.releaseDate)
+                    }
+                }
             }
         }
         .onAppear {

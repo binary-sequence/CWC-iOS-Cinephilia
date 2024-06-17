@@ -9,12 +9,16 @@ import Foundation
 
 struct Movie: Decodable, Identifiable {
     let id: Int
+    let originalLanguage: String
     let originalTitle: String
     let releaseDate: String
+    let title: String
     
     enum CodingKeys: String, CodingKey {
         case id
+        case originalLanguage = "original_language"
         case originalTitle = "original_title"
         case releaseDate = "release_date"
+        case title
     }
 }
