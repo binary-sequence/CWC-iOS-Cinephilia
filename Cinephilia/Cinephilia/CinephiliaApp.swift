@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CinephiliaApp: App {
+    @State var model = MoviesViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environment(model)
         }
     }
 }

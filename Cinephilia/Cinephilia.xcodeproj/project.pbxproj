@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		495D5A542C1F748C0051B897 /* CinephiliaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A532C1F748C0051B897 /* CinephiliaApp.swift */; };
-		495D5A562C1F748C0051B897 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A552C1F748C0051B897 /* ContentView.swift */; };
 		495D5A582C1F748D0051B897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495D5A572C1F748D0051B897 /* Assets.xcassets */; };
 		495D5A5B2C1F748D0051B897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495D5A5A2C1F748D0051B897 /* Preview Assets.xcassets */; };
+		495D5A672C20927B0051B897 /* discover-movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 495D5A662C20927B0051B897 /* discover-movies.json */; };
+		495D5A692C2093020051B897 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A682C2093020051B897 /* DataService.swift */; };
+		495D5A6B2C2094000051B897 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A6A2C2094000051B897 /* Movie.swift */; };
+		495D5A6D2C2097380051B897 /* DiscoverMoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A6C2C2097380051B897 /* DiscoverMoviesResponse.swift */; };
+		495D5A6F2C20991F0051B897 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A6E2C20991F0051B897 /* HomeView.swift */; };
+		495D5A712C20C3820051B897 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D5A702C20C3820051B897 /* MoviesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		495D5A502C1F748C0051B897 /* Cinephilia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinephilia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495D5A532C1F748C0051B897 /* CinephiliaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinephiliaApp.swift; sourceTree = "<group>"; };
-		495D5A552C1F748C0051B897 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		495D5A572C1F748D0051B897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495D5A5A2C1F748D0051B897 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		495D5A662C20927B0051B897 /* discover-movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "discover-movies.json"; sourceTree = "<group>"; };
+		495D5A682C2093020051B897 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		495D5A6A2C2094000051B897 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		495D5A6C2C2097380051B897 /* DiscoverMoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoviesResponse.swift; sourceTree = "<group>"; };
+		495D5A6E2C20991F0051B897 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		495D5A702C20C3820051B897 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +62,13 @@
 			isa = PBXGroup;
 			children = (
 				495D5A532C1F748C0051B897 /* CinephiliaApp.swift */,
-				495D5A552C1F748C0051B897 /* ContentView.swift */,
 				495D5A572C1F748D0051B897 /* Assets.xcassets */,
 				495D5A592C1F748D0051B897 /* Preview Content */,
+				495D5A652C2091FE0051B897 /* data */,
+				495D5A612C2091A80051B897 /* models */,
+				495D5A632C2091B20051B897 /* services */,
+				495D5A642C2091B80051B897 /* viewmodels */,
+				495D5A622C2091AE0051B897 /* views */,
 			);
 			path = Cinephilia;
 			sourceTree = "<group>";
@@ -65,6 +79,47 @@
 				495D5A5A2C1F748D0051B897 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		495D5A612C2091A80051B897 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				495D5A6C2C2097380051B897 /* DiscoverMoviesResponse.swift */,
+				495D5A6A2C2094000051B897 /* Movie.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		495D5A622C2091AE0051B897 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				495D5A6E2C20991F0051B897 /* HomeView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		495D5A632C2091B20051B897 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				495D5A682C2093020051B897 /* DataService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		495D5A642C2091B80051B897 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				495D5A702C20C3820051B897 /* MoviesViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		495D5A652C2091FE0051B897 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				495D5A662C20927B0051B897 /* discover-movies.json */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +182,7 @@
 			files = (
 				495D5A5B2C1F748D0051B897 /* Preview Assets.xcassets in Resources */,
 				495D5A582C1F748D0051B897 /* Assets.xcassets in Resources */,
+				495D5A672C20927B0051B897 /* discover-movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				495D5A562C1F748C0051B897 /* ContentView.swift in Sources */,
+				495D5A6D2C2097380051B897 /* DiscoverMoviesResponse.swift in Sources */,
+				495D5A692C2093020051B897 /* DataService.swift in Sources */,
+				495D5A6F2C20991F0051B897 /* HomeView.swift in Sources */,
+				495D5A712C20C3820051B897 /* MoviesViewModel.swift in Sources */,
+				495D5A6B2C2094000051B897 /* Movie.swift in Sources */,
 				495D5A542C1F748C0051B897 /* CinephiliaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
