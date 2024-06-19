@@ -14,8 +14,21 @@ struct HomeView: View {
         List {
             ForEach(model.movies) { m in
                 HStack {
-                    Image(systemName: "movieclapper")
-                        .font(.largeTitle)
+                    if let backdropPath = m.backdropPath {
+                        let backdropURL = model.getBackdropURL(backdropPath: backdropPath)
+                        AsyncImage(url: URL(string: backdropURL)) { image in
+                            image
+                                .resizable()
+                                .frame(width:50, height: 50)
+                        } placeholder: {
+                            ProgressView()
+                                .frame(width: 50, height: 50)
+                        }
+                    }
+                    else {
+                        Image(systemName: "movieclapper")
+                            .font(.largeTitle)
+                    }
                     VStack(alignment: .leading) {
                         HStack {
                             Text(m.originalTitle)
@@ -35,8 +48,4 @@ struct HomeView: View {
             model.discoverMovies()
         }
     }
-}
-
-#Preview {
-    HomeView()
 }

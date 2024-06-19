@@ -13,6 +13,7 @@ struct Movie: Decodable, Identifiable {
     let originalTitle: String
     let releaseDate: String
     let title: String
+    let backdropPath: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -20,5 +21,6 @@ struct Movie: Decodable, Identifiable {
         case originalTitle = "original_title"
         case releaseDate = "release_date"
         case title
+        case backdropPath = "backdrop_path"
     }
 }

@@ -18,4 +18,8 @@ class MoviesViewModel {
             movies = await service.discoverMovies()
         }
     }
+    
+    func getBackdropURL(backdropPath: String) -> String {
+        return "https://image.tmdb.org/t/p/original\(backdropPath)"
+    }
 }
