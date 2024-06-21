@@ -10,11 +10,17 @@ import SwiftUI
 @main
 struct CinephiliaApp: App {
     @State var model = MoviesViewModel()
+    @AppStorage("onboarding") var needsOnboarding = true
     
     var body: some Scene {
         WindowGroup {
             HomeView()
                 .environment(model)
+                .fullScreenCover(isPresented: $needsOnboarding) {
+                    needsOnboarding = false
+                } content: {
+                    OnBoardingView()
+                }
         }
     }
 }
