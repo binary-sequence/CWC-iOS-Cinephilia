@@ -17,15 +17,18 @@ struct HomeView: View {
                 .tabItem {
                     Label("Releases", systemImage: "calendar")
                 }
+                .onAppear {
+                    model.getNewReleases()
+                }
             
             SearchMoviesView()
                 .tag(1)
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass.circle")
                 }
-        }
-        .onAppear {
-            model.getNewReleases()
+                .onAppear {
+                    model.movies = nil
+                }
         }
     }
 }

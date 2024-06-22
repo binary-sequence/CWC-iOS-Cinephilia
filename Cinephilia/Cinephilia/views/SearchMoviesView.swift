@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct SearchMoviesView: View {
-    @State var keywords = ""
+    @Environment(MoviesViewModel.self) var model
+    @State var query = ""
     @State var years = 1900..<2034
     @State var selectedYear = Calendar.current.component(.year, from: Date())
-    @FocusState var queryBoxFocused:Bool
-    @State var showOptions = false
     
     var body: some View {
         VStack {
             Text("Search movies")
             
-            TextField("Keywords", text: $keywords)
+            TextField("Search", text: $query)
                 .textFieldStyle(.roundedBorder)
-                .focused($queryBoxFocused)
-                .onTapGesture {
-                    withAnimation {
-                        showOptions = true
+                .onChange(of: query) { oldValue, newValue in
+                    if newValue.isEmpty {
+                        model.movies = nil
                     }
                 }
             
@@ -34,14 +32,40 @@ struct SearchMoviesView: View {
                         Text(String(year))
                     }
                 }
+                
+                Spacer()
+                
+                Button {
+                    let userParams = [
+                        "query=\(query)",
+                        "year=\(selectedYear)"
+                    ]
+                    model.searchMovies(userParams: userParams)
+                } label: {
+                    Text("Go")
+                        .padding(.horizontal)
+                        .frame(height: 32)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(6)
+                }
+            }
+            
+            if (query.isEmpty) {
+                Text("search field is mandatory")
+                    .foregroundStyle(Color.red)
+            }
+            else if let movies = model.movies {
+                if movies.count == 0 {
+                    Text("No movie found")
+                }
+                else {
+                    MovieListView()
+                }
             }
             
             Spacer()
         }
         .padding()
     }
-}
-
-#Preview {
-    SearchMoviesView()
 }

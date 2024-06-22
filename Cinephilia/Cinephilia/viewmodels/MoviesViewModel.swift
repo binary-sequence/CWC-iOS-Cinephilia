@@ -11,7 +11,11 @@ import SwiftUI
 @Observable
 class MoviesViewModel {
     let service = DataService()
-    var movies = [Movie]()
+    var movies: [Movie]?
+    
+    func getBackdropURL(backdropPath: String) -> String {
+        return "https://image.tmdb.org/t/p/original\(backdropPath)"
+    }
     
     func getNewReleases() {
         Task {
@@ -19,7 +23,10 @@ class MoviesViewModel {
         }
     }
     
-    func getBackdropURL(backdropPath: String) -> String {
-        return "https://image.tmdb.org/t/p/original\(backdropPath)"
+    func searchMovies(userParams: [String]) {
+        let userParams = userParams.joined(separator: "&")
+        Task {
+            movies = await service.searchMovies(userParams: userParams)
+        }
     }
 }

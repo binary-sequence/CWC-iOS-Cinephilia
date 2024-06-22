@@ -20,6 +20,7 @@
 		49642D8E2C260D6500887867 /* NewReleasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D8D2C260D6500887867 /* NewReleasesView.swift */; };
 		49642D902C260FC000887867 /* SearchMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D8F2C260FC000887867 /* SearchMoviesView.swift */; };
 		49642D952C26DCBE00887867 /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D942C26DCBE00887867 /* StringFormatter.swift */; };
+		49642D972C27362000887867 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D962C27362000887867 /* MovieListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		49642D912C26CF8400887867 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		49642D922C26D0AC00887867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49642D942C26DCBE00887867 /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
+		49642D962C27362000887867 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		495D5A522C1F748C0051B897 /* Cinephilia */ = {
 			isa = PBXGroup;
 			children = (
+				49642D912C26CF8400887867 /* Config.xcconfig */,
 				49642D922C26D0AC00887867 /* Info.plist */,
 				495D5A532C1F748C0051B897 /* CinephiliaApp.swift */,
 				495D5A572C1F748D0051B897 /* Assets.xcassets */,
@@ -80,7 +83,6 @@
 				495D5A632C2091B20051B897 /* services */,
 				495D5A642C2091B80051B897 /* viewmodels */,
 				495D5A622C2091AE0051B897 /* views */,
-				49642D912C26CF8400887867 /* Config.xcconfig */,
 			);
 			path = Cinephilia;
 			sourceTree = "<group>";
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				495D5A6E2C20991F0051B897 /* HomeView.swift */,
+				49642D962C27362000887867 /* MovieListView.swift */,
 				49642D8D2C260D6500887867 /* NewReleasesView.swift */,
 				49642D892C236CEA00887867 /* OnBoardingView.swift */,
 				49642D8B2C26041300887867 /* OnboardingDetailsView.swift */,
@@ -213,6 +216,7 @@
 				49642D8C2C26041300887867 /* OnboardingDetailsView.swift in Sources */,
 				49642D8A2C236CEA00887867 /* OnBoardingView.swift in Sources */,
 				495D5A6F2C20991F0051B897 /* HomeView.swift in Sources */,
+				49642D972C27362000887867 /* MovieListView.swift in Sources */,
 				49642D8E2C260D6500887867 /* NewReleasesView.swift in Sources */,
 				495D5A712C20C3820051B897 /* MoviesViewModel.swift in Sources */,
 				49642D902C260FC000887867 /* SearchMoviesView.swift in Sources */,
