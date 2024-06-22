@@ -28,7 +28,9 @@ struct OnboardingDetailsView: View {
                 
                 Spacer()
                 
-                Image(systemName: "photo.artframe")
+                Image(screenshot)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 
                 Spacer()
                 
