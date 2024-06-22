@@ -37,6 +37,8 @@
 		49642D8B2C26041300887867 /* OnboardingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailsView.swift; sourceTree = "<group>"; };
 		49642D8D2C260D6500887867 /* NewReleasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesView.swift; sourceTree = "<group>"; };
 		49642D8F2C260FC000887867 /* SearchMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesView.swift; sourceTree = "<group>"; };
+		49642D912C26CF8400887867 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		49642D922C26D0AC00887867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		495D5A522C1F748C0051B897 /* Cinephilia */ = {
 			isa = PBXGroup;
 			children = (
+				49642D922C26D0AC00887867 /* Info.plist */,
 				495D5A532C1F748C0051B897 /* CinephiliaApp.swift */,
 				495D5A572C1F748D0051B897 /* Assets.xcassets */,
 				495D5A592C1F748D0051B897 /* Preview Content */,
@@ -77,6 +80,7 @@
 				495D5A632C2091B20051B897 /* services */,
 				495D5A642C2091B80051B897 /* viewmodels */,
 				495D5A622C2091AE0051B897 /* views */,
+				49642D912C26CF8400887867 /* Config.xcconfig */,
 			);
 			path = Cinephilia;
 			sourceTree = "<group>";
@@ -223,6 +227,7 @@
 /* Begin XCBuildConfiguration section */
 		495D5A5C2C1F748D0051B897 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49642D912C26CF8400887867 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -286,6 +291,7 @@
 		};
 		495D5A5D2C1F748D0051B897 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49642D912C26CF8400887867 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -351,6 +357,7 @@
 				DEVELOPMENT_TEAM = YG673979W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cinephilia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -380,6 +387,7 @@
 				DEVELOPMENT_TEAM = YG673979W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cinephilia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
