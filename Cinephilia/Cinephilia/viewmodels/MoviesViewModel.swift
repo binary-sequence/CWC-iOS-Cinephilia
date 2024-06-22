@@ -13,9 +13,9 @@ class MoviesViewModel {
     let service = DataService()
     var movies = [Movie]()
     
-    func discoverMovies() {
+    func getNewReleases() {
         Task {
-            movies = await service.discoverMovies()
+            movies = await service.getNewReleases()
         }
     }
     

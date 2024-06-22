@@ -25,7 +25,7 @@ struct HomeView: View {
                 }
         }
         .onAppear {
-            model.discoverMovies()
+            model.getNewReleases()
         }
     }
 }

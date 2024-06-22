@@ -8,17 +8,31 @@
 import Foundation
 
 struct DataService {
-    func discoverMovies() async -> [Movie] {
-        if let url = Bundle.main.url(forResource: "discover-movies", withExtension: "json") {
+    let apiToken = (Bundle.main.infoDictionary!["API_TOKEN"]! as? String)!
+    let apiHost = "https://api.themoviedb.org"
+    
+    func getNewReleases() async -> [Movie] {
+        let today = StringFormatter.getFormatted(date: Date())
+        let params = [
+            "include_adult=false",
+            "include_video=false",
+            "language=en-US",
+            "primary_release_date.gte=\(today)",
+            "sort_by=primary_release_date.asc",
+            "page=1"
+        ].joined(separator: "&")
+        let endpoint = "\(apiHost)/3/discover/movie?\(params)"
+        
+        if let url = URL(string: endpoint) {
+            var request = URLRequest(url: url)
+            request.addValue("Bearer \(apiToken)", forHTTPHeaderField: "Authorization")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            
             do {
-                let data = try Data(contentsOf: url)
-                do {
-                    let response = try JSONDecoder().decode(DiscoverMoviesResponse.self, from: data)
-                    return response.results
-                }
-                catch {
-                    print(error)
-                }
+                let (data, response) = try await URLSession.shared.data(for: request)
+                print(response)
+                let result = try JSONDecoder().decode(DiscoverMoviesResponse.self, from: data)
+                return result.results
             }
             catch {
                 print(error)
