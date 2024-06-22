@@ -15,7 +15,13 @@ struct HomeView: View {
             NewReleasesView()
                 .tag(0)
                 .tabItem {
-                    Label("Releases", systemImage: "calendar.circle")
+                    Label("Releases", systemImage: "calendar")
+                }
+            
+            SearchMoviesView()
+                .tag(1)
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass.circle")
                 }
         }
         .onAppear {

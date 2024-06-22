@@ -19,6 +19,7 @@
 		49642D8A2C236CEA00887867 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D892C236CEA00887867 /* OnBoardingView.swift */; };
 		49642D8C2C26041300887867 /* OnboardingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D8B2C26041300887867 /* OnboardingDetailsView.swift */; };
 		49642D8E2C260D6500887867 /* NewReleasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D8D2C260D6500887867 /* NewReleasesView.swift */; };
+		49642D902C260FC000887867 /* SearchMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49642D8F2C260FC000887867 /* SearchMoviesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		49642D892C236CEA00887867 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		49642D8B2C26041300887867 /* OnboardingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDetailsView.swift; sourceTree = "<group>"; };
 		49642D8D2C260D6500887867 /* NewReleasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesView.swift; sourceTree = "<group>"; };
+		49642D8F2C260FC000887867 /* SearchMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				49642D8D2C260D6500887867 /* NewReleasesView.swift */,
 				49642D892C236CEA00887867 /* OnBoardingView.swift */,
 				49642D8B2C26041300887867 /* OnboardingDetailsView.swift */,
+				49642D8F2C260FC000887867 /* SearchMoviesView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				495D5A6F2C20991F0051B897 /* HomeView.swift in Sources */,
 				49642D8E2C260D6500887867 /* NewReleasesView.swift in Sources */,
 				495D5A712C20C3820051B897 /* MoviesViewModel.swift in Sources */,
+				49642D902C260FC000887867 /* SearchMoviesView.swift in Sources */,
 				495D5A6B2C2094000051B897 /* Movie.swift in Sources */,
 				495D5A542C1F748C0051B897 /* CinephiliaApp.swift in Sources */,
 			);
