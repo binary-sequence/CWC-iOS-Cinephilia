@@ -12,9 +12,10 @@ struct MovieListView: View {
     
     var body: some View {
         if let movies = model.movies {
-            NavigationStack {
-                List {
-                    ForEach(movies) { m in
+            List {
+                ForEach(movies.indices, id: \.self) { i in
+                    if let movies = model.movies {
+                        let m = movies[i]
                         HStack {
                             if let backdropPath = m.backdropPath {
                                 let backdropURL = model.getBackdropURL(backdropPath: backdropPath)
@@ -44,10 +45,13 @@ struct MovieListView: View {
                                 Text(m.releaseDate)
                             }
                         }
+                        .onTapGesture {
+                            model.selectedMovie = m
+                        }
                     }
                 }
-                .listStyle(.plain)
             }
+            .listStyle(.plain)
         }
     }
 }

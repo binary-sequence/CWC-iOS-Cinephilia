@@ -11,6 +11,8 @@ struct HomeView: View {
     @Environment(MoviesViewModel.self) var model
     
     var body: some View {
+        @Bindable var model = model
+        
         TabView {
             NewReleasesView()
                 .tag(0)
@@ -29,6 +31,9 @@ struct HomeView: View {
                 .onAppear {
                     model.movies = nil
                 }
+        }
+        .sheet(item: $model.selectedMovie) { m in
+            MovieDetailView()
         }
     }
 }

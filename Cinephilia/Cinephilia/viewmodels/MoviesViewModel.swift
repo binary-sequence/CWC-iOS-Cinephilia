@@ -12,6 +12,7 @@ import SwiftUI
 class MoviesViewModel {
     let service = DataService()
     var movies: [Movie]?
+    var selectedMovie: Movie?
     
     func getBackdropURL(backdropPath: String) -> String {
         return "https://image.tmdb.org/t/p/original\(backdropPath)"

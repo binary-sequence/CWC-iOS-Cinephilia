@@ -25,7 +25,7 @@ struct DataService {
             do {
                 let (data, response) = try await URLSession.shared.data(for: request)
                 print(response)
-                let result = try JSONDecoder().decode(DiscoverMoviesResponse.self, from: data)
+                let result = try JSONDecoder().decode(TMDBResponse.self, from: data)
                 return result.results
             }
             catch {

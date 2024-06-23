@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DiscoverMoviesResponse: Decodable {
+struct TMDBResponse: Decodable {
     let page: Int
     let results: [Movie]
 }
