@@ -32,7 +32,9 @@ struct HomeView: View {
                     model.movies = nil
                 }
         }
-        .sheet(item: $model.selectedMovie) { m in
+        .sheet(item: $model.selectedMovie) {
+            model.selectedMovie = nil
+        } content: { m in
             MovieDetailView()
         }
     }
